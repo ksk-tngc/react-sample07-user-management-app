@@ -1,7 +1,9 @@
+import { Login } from './components/pages/Login'
+
 export const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <Login />
     </div>
   )
 }

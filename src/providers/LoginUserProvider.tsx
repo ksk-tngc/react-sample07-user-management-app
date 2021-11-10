@@ -16,7 +16,9 @@ type LoginUserContextType = {
 }
 
 // Context
-export const LoginUserContext = createContext<LoginUserContextType | null>(null)
+export const LoginUserContext = createContext<LoginUserContextType>(
+  {} as LoginUserContextType
+)
 
 // Context.Provider
 export const LoginUserProvider: VFC<{ children: ReactNode }> = memo((props) => {

@@ -1,14 +1,18 @@
 import axios from 'axios'
 import { useCallback, useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { useLoginUser } from '../hooks/useLoginUser'
 import { useToastMessage } from '../hooks/useToastMessage'
 import { User } from '../types/api/User'
 
 export const useAuth = () => {
+  // State
   const [isLoading, setIsLoading] = useState(false)
 
+  // Custom Hooks
   const history = useHistory()
   const { showMessage } = useToastMessage()
+  const { setLoginUser } = useLoginUser()
 
   // ログイン処理
   const login = useCallback(
@@ -19,6 +23,7 @@ export const useAuth = () => {
         .then((res) => {
           if (res.data.id.toString() === id) {
             setIsLoading(false)
+            setLoginUser(res.data) // Contextに保存
             showMessage({ title: 'ログインしました', status: 'success' })
             history.push('/home')
           }
@@ -28,7 +33,7 @@ export const useAuth = () => {
           showMessage({ title: 'ユーザが見つかりません', status: 'error' })
         })
     },
-    [history, showMessage]
+    [history, setLoginUser, showMessage]
   )
   return { login, isLoading }
 }

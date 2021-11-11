@@ -1,13 +1,14 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { memo, useCallback, VFC } from 'react'
 import { useHistory } from 'react-router-dom'
+import { MenuTitle } from '../atoms/MenuTitle'
 
 type Props = {
   label: string
   to: string
 }
 
-export const HeaderMenuTitle: VFC<Props> = memo((props) => {
+export const DrawerMenuTitle: VFC<Props> = memo((props) => {
   const { label, to } = props
 
   const history = useHistory()
@@ -18,15 +19,12 @@ export const HeaderMenuTitle: VFC<Props> = memo((props) => {
 
   return (
     <Flex
-      ml="4"
-      h="100%"
+      w="100%"
       align="center"
       _hover={{ cursor: 'pointer' }}
       onClick={onClickHeader}
     >
-      <Heading as="h1" size="md">
-        {label}
-      </Heading>
+      <MenuTitle label={label} />
     </Flex>
   )
 })

@@ -16,7 +16,7 @@ export const Header: VFC = memo(() => {
         boxShadow="lg"
         h="57px"
         align="center"
-        ps={{ base: '2', md: '4' }}
+        ps={{ base: '2', md: '5' }}
       >
         {/* ハンバーガーアイコン */}
         <IconButton

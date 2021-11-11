@@ -1,6 +1,7 @@
 import { Flex, Spinner, useDisclosure, Wrap, WrapItem } from '@chakra-ui/react'
 import { memo, useCallback, useEffect, VFC } from 'react'
 import { useAllUsers } from '../../hooks/useAllUsers'
+import { useLoginUser } from '../../hooks/useLoginUser'
 import { useSelectUser } from '../../hooks/useSelectUser'
 import { UserCard } from '../organisms/UserCard'
 import { UserDetailModal } from '../organisms/UserDetailModal'
@@ -10,6 +11,7 @@ export const Users: VFC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { getAllUsers, allUsers, isLoading } = useAllUsers()
   const { onSelectUser, selectedUser } = useSelectUser()
+  const { loginUser } = useLoginUser()
 
   // ユーザ一覧取得
   useEffect(() => getAllUsers(), [getAllUsers])
@@ -44,7 +46,12 @@ export const Users: VFC = memo(() => {
         </Wrap>
       )}
       {/* ユーザ詳細モーダル */}
-      <UserDetailModal isOpen={isOpen} onClose={onClose} user={selectedUser} />
+      <UserDetailModal
+        isOpen={isOpen}
+        onClose={onClose}
+        user={selectedUser}
+        isAdmin={loginUser?.isAdmin ?? false}
+      />
     </>
   )
 })

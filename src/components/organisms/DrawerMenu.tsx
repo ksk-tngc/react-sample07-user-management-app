@@ -21,13 +21,7 @@ export const DrawerMenu: VFC<Props> = memo((props) => {
   const { isOpen, onClose } = props
 
   return (
-    <Drawer
-      isOpen={isOpen}
-      onClose={onClose}
-      autoFocus={false}
-      placement="left"
-      size="xs"
-    >
+    <Drawer isOpen={isOpen} onClose={onClose} placement="left" size="xs">
       <DrawerOverlay />
       <DrawerContent>
         <DrawerHeader>

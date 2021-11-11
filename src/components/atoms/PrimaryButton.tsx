@@ -3,13 +3,18 @@ import { memo, ReactNode, VFC } from 'react'
 
 type Props = {
   children: ReactNode
-  onClick: () => void
-  disabled: boolean
-  isLoading: boolean
+  onClick?: () => void
+  disabled?: boolean
+  isLoading?: boolean
 }
 
 export const PrimaryButton: VFC<Props> = memo((props) => {
-  const { children, onClick, disabled, isLoading } = props
+  const {
+    children,
+    onClick = undefined,
+    disabled = false,
+    isLoading = false,
+  } = props
 
   return (
     <Button

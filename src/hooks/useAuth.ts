@@ -23,7 +23,8 @@ export const useAuth = () => {
         .then((res) => {
           if (res.data.id.toString() === id) {
             setIsLoading(false)
-            setLoginUser(res.data) // Contextに保存
+            const isAdmin = res.data.id === 10 ? true : false // 仮の管理者ユーザ
+            setLoginUser({ ...res.data, isAdmin }) // Contextに保存
             showMessage({ title: 'ログインしました', status: 'success' })
             history.push('/home')
           }

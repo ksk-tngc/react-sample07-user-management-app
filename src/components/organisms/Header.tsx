@@ -14,7 +14,7 @@ export const Header: VFC = memo(() => {
       <Flex
         as="nav"
         boxShadow="lg"
-        h="52px"
+        h="57px"
         align="center"
         ps={{ base: '2', md: '4' }}
       >

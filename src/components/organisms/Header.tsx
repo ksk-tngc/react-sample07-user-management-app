@@ -57,7 +57,7 @@ export const Header: VFC = memo(() => {
             />
           </HStack>
         </HStack>
-        <Box ms="auto" me="4" display={{ base: 'none', md: 'block' }}>
+        <Box ms="auto" me="5" display={{ base: 'none', md: 'block' }}>
           <HeaderMenuItem
             icon={<BsFillDoorClosedFill />}
             label="ログアウト"

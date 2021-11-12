@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+## 概要
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chakra UI を使用した簡単な React アプリケーションです。  
 
-## Available Scripts
+以下の要素を含みます：
 
-In the project directory, you can run:
+* TypeScript
+* Atomic Design
+* Chakra UI
+* React Router
+* axios
+* カスタムフック
+* Context (グローバルstate)
+* 再レンダリングの最適化 (memo, useCallback)
+* レスポンシブ
+* JSONPlaceholder (バックエンド未実装)
+* Unsplash
 
-### `yarn start`
+## レンダリング
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### ログイン
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141473070-c4aa6243-eb29-4eb0-9975-3b1377b729fb.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141473302-acefaa1d-364a-4483-83b0-ac73106973c3.png">
 
-### `yarn test`
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141473468-5274abf0-c2ec-4cfa-bda6-e81c787c05ea.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### トップ
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141473800-3f2ddb69-6847-41e1-a1f5-2c8ab3829afc.png">
 
-### `yarn build`
+#### ユーザ一覧
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141474040-f4f4c81f-bf29-4c86-933a-7fa894dd8491.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### 検索
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141474328-4b843076-d291-4923-b2a1-52c013c273e3.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### カードクリック → ユーザ詳細モーダル
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141474838-0f48e308-f7cd-4256-98bf-ca8fb48a3296.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141474938-ba5ac469-7d42-4244-a82b-9250c7e7491e.png">
 
-### `yarn eject`
+#### ログアウト
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141475265-9dbcef4e-f834-455e-9954-3aa0f2ddaa60.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img width="640" src="https://user-images.githubusercontent.com/59589496/141475397-a07d8bc0-4acf-43c2-bc6f-1e1683cc0f7c.png">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### レスポンシブ (ドロワーメニュー)
+<img width="440" src="https://user-images.githubusercontent.com/59589496/141475726-8148a4a0-9f9b-47c0-9bd1-38c077b88529.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img width="440" src="https://user-images.githubusercontent.com/59589496/141475842-00ed3b97-4727-40fb-8468-4a3b1cd7c7bb.png">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## フォルダ構成
 
-## Learn More
+<img width="340" src="https://user-images.githubusercontent.com/59589496/141476257-7fd0b6cd-a47a-4608-ae9b-fed7b8c923bb.png">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 主なライブラリ
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* `@chakra-ui/react@1.6.10`
+* `@chakra-ui/icons@1.0.17`
+* `react-router-dom@5.3.0`
+* `@types/react-router-dom@5.3.2`
+* `axios@0.24.0`
+* `react-icons@4.3.1`
+* `@fontsource/m-plus-rounded-1c@4.5.0`

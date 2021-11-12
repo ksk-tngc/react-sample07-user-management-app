@@ -18,17 +18,17 @@ Chakra UI を使用した簡単な React アプリケーションです。
 
 ## レンダリング
 
-#### ログイン
+#### ログインページ
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141473070-c4aa6243-eb29-4eb0-9975-3b1377b729fb.png">
 
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141473302-acefaa1d-364a-4483-83b0-ac73106973c3.png">
 
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141473468-5274abf0-c2ec-4cfa-bda6-e81c787c05ea.png">
 
-#### トップ
+#### トップページ
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141473800-3f2ddb69-6847-41e1-a1f5-2c8ab3829afc.png">
 
-#### ユーザ一覧
+#### ユーザ一覧ページ
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141474040-f4f4c81f-bf29-4c86-933a-7fa894dd8491.png">
 
 ##### 検索
@@ -51,7 +51,7 @@ Chakra UI を使用した簡単な React アプリケーションです。
 
 ## フォルダ構成
 
-<img width="340" src="https://user-images.githubusercontent.com/59589496/141476257-7fd0b6cd-a47a-4608-ae9b-fed7b8c923bb.png">
+<img width="400" src="https://user-images.githubusercontent.com/59589496/141476257-7fd0b6cd-a47a-4608-ae9b-fed7b8c923bb.png">
 
 ## 主なライブラリ
 

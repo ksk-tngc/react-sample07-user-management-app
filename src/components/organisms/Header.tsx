@@ -1,26 +1,38 @@
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { Flex, HStack, IconButton, useDisclosure } from '@chakra-ui/react'
+import { Box, Flex, HStack, IconButton, useDisclosure } from '@chakra-ui/react'
 import { memo, VFC } from 'react'
-import { BsFillGearFill, BsFillPersonLinesFill } from 'react-icons/bs'
+import {
+  BsFillDoorClosedFill,
+  BsFillGearFill,
+  BsFillPersonLinesFill,
+} from 'react-icons/bs'
+import { useAuth } from '../../hooks/useAuth'
 import { HeaderMenuItem } from '../molecules/HeaderMenuItem'
 import { HeaderMenuTitle } from '../molecules/HeaderMenuTitle'
+import { ConfirmDialog } from '../organisms/ConfirmDialog'
 import { DrawerMenu } from '../organisms/DrawerMenu'
 
 export const Header: VFC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const {
+    isOpen: isOpenLogoutConfirm,
+    onOpen: onOpenLogoutConfirm,
+    onClose: onCloseLogoutConfirm,
+  } = useDisclosure()
+  const { logout } = useAuth()
 
   return (
     <>
       <Flex
         as="nav"
-        boxShadow="lg"
+        boxShadow="md"
         h="57px"
         align="center"
         ps={{ base: '2', md: '5' }}
       >
         {/* ハンバーガーアイコン */}
         <IconButton
-          me="1"
+          me="2"
           aria-label="ドロワーを開く"
           icon={<HamburgerIcon />}
           variant="unstyled"
@@ -45,10 +57,25 @@ export const Header: VFC = memo(() => {
             />
           </HStack>
         </HStack>
+        <Box ms="auto" me="4" display={{ base: 'none', md: 'block' }}>
+          <HeaderMenuItem
+            icon={<BsFillDoorClosedFill />}
+            label="ログアウト"
+            onClick={onOpenLogoutConfirm}
+          />
+        </Box>
       </Flex>
 
       {/* ドロワー */}
       <DrawerMenu isOpen={isOpen} onClose={onClose} />
+
+      {/* ログアウト確認メッセージ */}
+      <ConfirmDialog
+        isOpen={isOpenLogoutConfirm}
+        onClose={onCloseLogoutConfirm}
+        onClickOK={logout}
+        message="ログアウトします。よろしいですか？"
+      />
     </>
   )
 })

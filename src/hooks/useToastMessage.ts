@@ -14,7 +14,7 @@ export const useToastMessage = () => {
       toast({
         title,
         status,
-        duration: 2000,
+        duration: 2500,
         isClosable: true,
         position: 'top',
       })

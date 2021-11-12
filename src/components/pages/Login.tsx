@@ -26,7 +26,7 @@ export const Login: VFC = memo(() => {
     <Flex h="100vh" justify="center" align="center">
       <Box w="sm" bg="White" p="8" textAlign="center" borderRadius="xl" pb="9">
         <Stack spacing="4">
-          <Heading as="h1" size="lg" color="gray.700">
+          <Heading as="h1" fontSize="2xl" color="gray.700">
             ユーザ管理アプリ
           </Heading>
           <Divider />

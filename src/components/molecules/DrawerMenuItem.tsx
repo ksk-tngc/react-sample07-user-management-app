@@ -6,11 +6,12 @@ import { MenuItem } from '../atoms/MenuItem'
 type Props = {
   icon: ReactElement
   label: string
-  to: string
+  to?: string
+  onClick?: () => void
 }
 
 export const DrawerMenuItem: VFC<Props> = memo((props) => {
-  const { icon, label, to } = props
+  const { icon, label, to = '', onClick = undefined } = props
 
   const history = useHistory()
 
@@ -23,8 +24,8 @@ export const DrawerMenuItem: VFC<Props> = memo((props) => {
       w="100%"
       align="center"
       color="gray.800"
-      _hover={{ cursor: 'pointer', color: 'black' }}
-      onClick={onClickItem}
+      _hover={{ cursor: 'pointer', opacity: '.8' }}
+      onClick={onClick || onClickItem}
     >
       <MenuItem icon={icon} label={label} />
     </Flex>

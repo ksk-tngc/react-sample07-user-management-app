@@ -21,7 +21,7 @@ export const DrawerMenuTitle: VFC<Props> = memo((props) => {
     <Flex
       w="100%"
       align="center"
-      _hover={{ cursor: 'pointer' }}
+      _hover={{ cursor: 'pointer', opacity: '.8' }}
       onClick={onClickHeader}
     >
       <MenuTitle label={label} />

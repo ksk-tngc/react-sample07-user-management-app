@@ -36,5 +36,13 @@ export const useAuth = () => {
     },
     [history, setLoginUser, showMessage]
   )
-  return { login, isLoading }
+
+  // ログアウト処理
+  const logout = useCallback(() => {
+    setLoginUser(null)
+    showMessage({ title: 'ログアウトしました', status: 'success' })
+    history.push('/')
+  }, [history, setLoginUser, showMessage])
+
+  return { login, isLoading, logout }
 }

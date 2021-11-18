@@ -1,6 +1,6 @@
 ## 概要
 
-Chakra UI を使用した簡単な React アプリケーションです。  
+TypeScript と Chakra UI を使用した簡単な React アプリケーションです。  
 
 以下の要素を含みます：
 

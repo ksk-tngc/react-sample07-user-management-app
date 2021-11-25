@@ -9,6 +9,8 @@ TypeScript と Chakra UI を使用した簡単な React アプリケーション
 * Chakra UI
 * React Router
 * axios
+* Fontsource
+* React Icons
 * カスタムフック
 * Context (グローバルstate)
 * 再レンダリングの最適化 (memo, useCallback)
@@ -31,10 +33,10 @@ TypeScript と Chakra UI を使用した簡単な React アプリケーション
 #### ユーザ一覧ページ
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141474040-f4f4c81f-bf29-4c86-933a-7fa894dd8491.png">
 
-##### 検索
+##### ユーザ一覧ページ - 検索
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141474328-4b843076-d291-4923-b2a1-52c013c273e3.png">
 
-##### カードクリック → ユーザ詳細モーダル
+##### ユーザ一覧ページ - カードクリック - ユーザ詳細モーダル
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141474838-0f48e308-f7cd-4256-98bf-ca8fb48a3296.png">
 
 <img width="640" src="https://user-images.githubusercontent.com/59589496/141474938-ba5ac469-7d42-4244-a82b-9250c7e7491e.png">
@@ -52,13 +54,3 @@ TypeScript と Chakra UI を使用した簡単な React アプリケーション
 ## フォルダ構成
 
 <img width="400" src="https://user-images.githubusercontent.com/59589496/141476257-7fd0b6cd-a47a-4608-ae9b-fed7b8c923bb.png">
-
-## 主なライブラリ
-
-* `@chakra-ui/react@1.6.10`
-* `@chakra-ui/icons@1.0.17`
-* `react-router-dom@5.3.0`
-* `@types/react-router-dom@5.3.2`
-* `axios@0.24.0`
-* `react-icons@4.3.1`
-* `@fontsource/m-plus-rounded-1c@4.5.0`
